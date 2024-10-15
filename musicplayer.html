@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Music Player</title>
+    <link rel="stylesheet" href="musicplayer.css">
+</head>
+<body>
+    <div class="music-player">
+        <h2>Interactive Music Player</h2>
+        <audio id="audio" src="demo-audio.mp3"></audio>
+
+        <div class="controls">
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+            <button id="backward"><< 10s</button>
+            <button id="forward">10s >></button>
+            <button id="mute">Mute</button>
+            <button id="repeat">Repeat</button>
+            <button id="shuffle">Shuffle</button>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="info">
+            <p id="current-time">0:00</p>
+            <p id="duration">0:00</p>
+        </div>
+
+        <div class="volume-control">
+            <label for="volume-control">Volume</label>
+            <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5">
+        </div>
+
+        <canvas id="visualizer" width="600" height="150"></canvas>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </div>
+
+    <script src="musicplayer.js"></script>
+</body>
+</html>
